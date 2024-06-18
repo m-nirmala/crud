@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bookshelf</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Bookshelf</h1>
+    </div>
+    <div class="container" id="books-container">
+        <div class="box-container">
+            <h2>Thinking,fast and slow</h2>
+            <h5>Daniel</h5>
+            <img src="image/cartoon.png" alt="Default Book Cover">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, omnis. Sapiente dolorum velit quae facere!</p>
+            <button onclick="deletebook(event)" class="delete-button">Delete</button>
+            <button onclick="editBook(event)" class="edit-button">Edit</button>
+        </div>
+    </div>
+    <div class="popup-overlay"></div>
+    <div class="overlay-popup">
+        <h2>Add/Edit Book</h2>
+        <form>
+            <input type="text" placeholder="Book Title" id="book-title-input">
+            <input type="text" placeholder="Book Author" id="book-author-input"><br>
+            <input type="file" id="book-image-input" accept="image/*">
+            <textarea placeholder="Short Description" id="short-description-input"></textarea>
+            <button id="add-book">Add</button>
+            <button id="cancel-popup">Cancel</button>
+        </form>
+    </div>
+    <button class="add-btn" id="add-popup-button">+</button>
+    <script src="script.js"></script>
+</body>
+</html>
